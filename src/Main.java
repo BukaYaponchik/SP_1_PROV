@@ -11,18 +11,18 @@ public class Main {
 
         System.out.println("Задание №2");
 
-        dog = 8.0 + 4;
-        cat = 3.6 + 4;
-        paper = 763789 + 4;
+        dog += 4;
+        cat += 4;
+        paper += 4;
         System.out.println(dog);
         System.out.println(cat);
         System.out.println(paper);
 
         System.out.println("Задание №3");
 
-        dog = 8.0 - 3.5;
-        cat = 3.6 - 1.6;
-        paper = 763789 - 7639;
+        dog -= 3.5;
+        cat -= 1.6;
+        paper -= 7639;
         System.out.println(dog);
         System.out.println(cat);
         System.out.println(paper);
@@ -70,7 +70,7 @@ public class Main {
         var numberEmployees = totalHours / hoursPerDay;
         System.out.println("Всего работников в компании - " + numberEmployees);
         numberEmployees += 94;
-        System.out.println("Если в компании работает " + numberEmployees + " человек, то всего " + totalHours / numberEmployees + " часов работы может быть поделено между сотрудниками");
+        System.out.println("Если в компании работает " + numberEmployees + " человек, то всего " + numberEmployees * 8 + " часов работы может быть поделено между сотрудниками");
 
     }
 }
