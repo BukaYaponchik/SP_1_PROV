@@ -32,17 +32,17 @@ public class Main {
 
         System.out.println("Задание №4");
 
-        byte agePerson = 18;
+        byte agePerson = 12;
         if (agePerson >= 2 && agePerson <= 6) {
             System.out.println("Если возраст человека равен " + agePerson + ", то ему нужно ходить в детский сад.");
         }
-        if (agePerson >= 7 && agePerson <= 17) {
+        else if (agePerson >= 7 && agePerson <= 17) {
             System.out.println("Если возраст человека равен " + agePerson + ", то ему нужно ходить в школу.");
         }
-        if (agePerson >= 18 && agePerson <= 24) {
+        else if (agePerson >= 18 && agePerson <= 24) {
             System.out.println("Если возраст человека равен " + agePerson + ", то ему нужно ходить в университет.");
         }
-        if (agePerson > 24) {
+        else  {
             System.out.println("Если возраст человека равен " + agePerson + ", то ему нужно ходить на работу.");
         }
 
@@ -52,11 +52,11 @@ public class Main {
         if (agePersonLimitations < 5) {
             System.out.println("Если возраст ребенка равен " + agePersonLimitations + ", то ему нельзя кататься на аттракционе.");
         }
-        if (agePersonLimitations >= 5 && agePersonLimitations < 14) {
+        else if (agePersonLimitations >= 5 && agePersonLimitations < 14) {
             System.out.println("Если возраст ребенка равен " + agePersonLimitations + ", то ему можно кататься на аттракционе в сопровождении.");
         }
-        if (agePersonLimitations >= 14) {
-            System.out.println("Если возраст ребенка равен " + agePersonLimitations + ", то ему без сопровождения взрослого.");
+        else  {
+            System.out.println("Если возраст ребенка равен " + agePersonLimitations + ", то ему можно без сопровождения взрослого.");
         }
 
         System.out.println("Задание №6");
@@ -82,10 +82,10 @@ public class Main {
         if (one >= two && one >= three){
             System.out.println("Самое большое число " + one);
         }
-        if (two >= one && two >= three){
+        else if (two >= one && two >= three){
             System.out.println("Самое большое число " + two);
         }
-        if (three >= one && three >= two){
+        else {
             System.out.println("Самое большое число " + three);
         }
     }
