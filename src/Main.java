@@ -10,7 +10,7 @@ public class Main {
 
         System.out.println("Задание №2");
 
-        short clientDeviceYear = 2017;
+        short clientDeviceYear = 2016;
         clientOS = 1;
 
         if ( clientDeviceYear < 2015){
