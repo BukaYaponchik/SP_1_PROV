@@ -1,72 +1,54 @@
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Задание №1");
-        int total_1 = 0;
-        int salary = 15000;
-        short mounts = 0;
-        while (total_1 <= 2_459_000) {
-            total_1 += (int) (total_1 * 0.01);
-            total_1 += salary;
-            System.out.println("Месяц " + mounts + " сумма накоплений равна " + total_1 + " рублей");
-            mounts++;
-        }
+
+        int [] firstMas = new int []{1, 2, 3};
+        double [] secondMas = {1.57, 7.654, 9.986};
+        boolean [] thirdMas = {true, true, true};
 
         System.out.println("Задание №2");
-        int i = 1;
-        for (; i <= 10; i++) {
-            System.out.print(i + " ");
+
+        for (int i = 0; i < firstMas.length; i++) {
+            if(i == firstMas.length - 1) System.out.print(firstMas[i]);
+            else System.out.print(firstMas[i] + ", ");
         }
         System.out.println();
-        while (i != 1) {
-            i--;
-            System.out.print(i + " ");
+        for (int i = 0; i < secondMas.length; i++) {
+            if(i == secondMas.length - 1) System.out.print(secondMas[i]);
+            else System.out.print(secondMas[i] + ", ");
         }
-
-        System.out.println("\nЗадание №3");
-
-        int population = 12_000_000;
-        int birthRate = 17;
-        int mortalityRate = 8;
-        for (i = 1; i <= 10; i++) {
-            population += ((birthRate - mortalityRate) * population / 1000);
-            System.out.println("Год " + i + " численность населения составляет " + population);
+        System.out.println();
+        for (int i = 0; i < thirdMas.length; i++) {
+            if(i == thirdMas.length - 1) System.out.print(thirdMas[i]);
+            else System.out.print(thirdMas[i] + ", ");
         }
+        System.out.println();
+
+        System.out.println("Задание №3");
+
+        for (int i = firstMas.length - 1; i >= 0; i--) {
+            if(i == 0) System.out.print(firstMas[i]);
+            else System.out.print(firstMas[i] + ", ");
+        }
+        System.out.println();
+        for (int i = secondMas.length - 1; i >= 0; i--) {
+            if(i == 0) System.out.print(secondMas[i]);
+            else System.out.print(secondMas[i] + ", ");
+        }
+        System.out.println();
+        for (int i = thirdMas.length - 1; i >= 0; i--) {
+            if(i == 0) System.out.print(thirdMas[i]);
+            else System.out.print(thirdMas[i] + ", ");
+        }
+        System.out.println();
 
         System.out.println("Задание №4");
-        int total_2 = 15000;
-        for (i = 1; total_2 <= 2_000_000; i++) {
-            total_2 += (int) (total_2 * 0.07);
-            System.out.println("Месяц " + i + " сумма накоплений равна " + total_2 + " рублей");
-        }
 
-        System.out.println("Задание №5");
-        total_2 = 15000;
-        for (i = 1; total_2 <= 2_000_000; i++) {
-            total_2 += (int) (total_2 * 0.07);
-            if (i % 6 == 0) System.out.println("Месяц " + i + " сумма накоплений равна " + total_2 + " рублей");
+        for (int i = 0; i < firstMas.length; i++) {
+            if (firstMas[i] % 2 == 1) firstMas[i]++;
         }
-
-        System.out.println("Задание №6");
-        total_2 = 15000;
-        for (i = 1; i <= (9 * 12); i++) {
-            total_2 += (int) (total_2 * 0.07);
-            if (i % 6 == 0) System.out.println("Месяц " + i + " сумма накоплений равна " + total_2 + " рублей");
-        }
-
-        System.out.println("Задание №7");
-        int firstFriday = 3;
-        for (i = firstFriday; i <= 31; i += 7) {
-            System.out.println("Сегодня пятница, " + i + "-е число. Необходимо подготовить отчет");
-        }
-
-        System.out.println("Задание №8");
-        int start = 2024;
-        int pace = 1;
-        for (i = start - 200; i <= start + 100; i += pace) {
-            if (i % 79 == 0) {
-                pace = 79;
-                System.out.println(i);
-            }
-        }
+        System.out.println(Arrays.toString(firstMas));
     }
 }
