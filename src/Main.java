@@ -33,36 +33,36 @@ public class Main {
         for (int i : costDataMonth2) {
             averageCostDataMonth += i;
         }
-        averageCostDataMonth /= 4;
+        averageCostDataMonth /= costDataMonth2.length;
         System.out.println("Средняя сумма трат за месяц составила " + averageCostDataMonth + " рублей");
 
         System.out.println("Задание №4");
 
         char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
         int indexWhitespace = 0;
-        char temporaryVariable;
+
         for (int i = 0; i < reverseFullName.length; i++) {
             if (reverseFullName[i] == ' '){
                 indexWhitespace = i;
+                break;
             }
         }
 
         int nameLength = indexWhitespace;
-        if (nameLength % 2 == 1) nameLength++;
-        for (int i = 0; i < (nameLength/2); i++) {
-            temporaryVariable = reverseFullName[i];
-            reverseFullName[i] = reverseFullName[nameLength - 1 - i];
-            reverseFullName[nameLength - 1 - i] = temporaryVariable;
+        if (nameLength % 2 == 1){
+            nameLength++;
         }
-
+        for (int i = nameLength - 1; i >= 0; i--) {
+            System.out.print(reverseFullName[i] + " ");
+        }
+        System.out.print(" ");
         int variableLength = (reverseFullName.length) - indexWhitespace - 1;
-        if (variableLength % 2 == 1) variableLength++;
-        for (int i = indexWhitespace + 1; i < indexWhitespace + (variableLength/2) + 1; i++) {
-            temporaryVariable = reverseFullName[i];
-            reverseFullName[i] = reverseFullName[reverseFullName.length + indexWhitespace - i];
-            reverseFullName[reverseFullName.length + indexWhitespace - i] = temporaryVariable;
+        if (variableLength % 2 == 1){
+            variableLength++;
+        }
+        for (int i = reverseFullName.length - 1; i > nameLength; i--) {
+            System.out.print(reverseFullName[i] + " ");
         }
 
-        System.out.println(Arrays.toString(reverseFullName));
     }
 }
