@@ -53,7 +53,7 @@ public class Main {
             nameLength++;
         }
         for (int i = nameLength - 1; i >= 0; i--) {
-            System.out.print(reverseFullName[i] + " ");
+            System.out.print(reverseFullName[i]);
         }
         System.out.print(" ");
         int variableLength = (reverseFullName.length) - indexWhitespace - 1;
@@ -61,7 +61,7 @@ public class Main {
             variableLength++;
         }
         for (int i = reverseFullName.length - 1; i > nameLength; i--) {
-            System.out.print(reverseFullName[i] + " ");
+            System.out.print(reverseFullName[i]);
         }
 
     }
