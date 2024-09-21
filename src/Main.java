@@ -10,24 +10,26 @@ public class Main {
         }
     }
 
-    public static void determiningPhoneVersion(int clientDeviceYear, byte clientOS){
-        if (clientDeviceYear < 2015 && clientOS == 0){
-            System.out.println("Установите облегченную версию приложения для iOS по ссылке ");}
-        else if(clientDeviceYear < 2015 && clientOS == 1){
-            System.out.println("Установите облегченную версию приложения для Android по ссылке");}
-        else if(clientDeviceYear >= 2015 && clientOS == 0){
-            System.out.println("Установите версию приложения для iOS по ссылке");}
-        else {
-            System.out.println("Установите версию приложения для Android по ссылке");}
+    public static void determiningPhoneVersion(int clientDeviceYear, byte clientOS) {
+        if (clientDeviceYear < 2015 && clientOS == 0) {
+            System.out.println("Установите облегченную версию приложения для iOS по ссылке ");
+        } else if (clientDeviceYear < 2015 && clientOS == 1) {
+            System.out.println("Установите облегченную версию приложения для Android по ссылке");
+        } else if (clientDeviceYear >= 2015 && clientOS == 0) {
+            System.out.println("Установите версию приложения для iOS по ссылке");
+        } else {
+            System.out.println("Установите версию приложения для Android по ссылке");
+        }
     }
 
-    public static int countingNumberDeliveryDays(int deliveryDistance){
-        if (deliveryDistance < 20){
-            return  1;}
-        else if(deliveryDistance >= 20 && deliveryDistance < 60){
-            return 2;}
-        else{
-            return 3;}
+    public static int countingNumberDeliveryDays(int deliveryDistance) {
+        if (deliveryDistance < 20) {
+            return 1;
+        } else if (deliveryDistance >= 20 && deliveryDistance < 60) {
+            return 2;
+        } else {
+            return 3;
+        }
     }
 
     public static void main(String[] args) {
@@ -51,9 +53,10 @@ public class Main {
         int deliveryDistance = 95;
         int deliveryDay = countingNumberDeliveryDays(deliveryDistance);
 
-        if (deliveryDay != 0){
-            System.out.println("Потребуется дней: " + deliveryDay);}
-        else {
-            System.out.println("Доставки нет");}
+        if (deliveryDay != 0) {
+            System.out.println("Потребуется дней: " + deliveryDay);
+        } else {
+            System.out.println("Доставки нет");
+        }
     }
 }
