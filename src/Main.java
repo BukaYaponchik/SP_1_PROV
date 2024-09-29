@@ -2,7 +2,7 @@ public class Main {
 
     public static void main(String[] args) {
         Author pushkin = new Author("Александр", "Пушкин");
-        Author vysotsky  = new Author("Владимир", "Высоцкий");
+        Author vysotsky = new Author("Владимир", "Высоцкий");
 
         Book dubrovsky = new Book("Дубровкий", pushkin, 1840);
         Book collectionVysotsky = new Book("Сборник произведений Высоцкого", vysotsky, 1983);
@@ -19,19 +19,16 @@ public class Main {
         System.out.println();
 
         System.out.println("Использование equals, где для книг не сравнивается год выпуска");
-        System.out.println("Приверка Дубровского и сборника Высоцкого " + dubrovsky.equals(collectionVysotsky));
+        System.out.println("Проверка Дубровского и Сборника ->" + dubrovsky.equals(collectionVysotsky));
         Book dubrovsky2 = new Book("Дубровкий", pushkin, 1840);
-        System.out.println("Проверка одинаковых Дубровских " + dubrovsky.equals(dubrovsky2));
+        System.out.println("Проверка Дубровского и Дубровского2 ->" + dubrovsky.equals(dubrovsky2));
         dubrovsky2.setYearPublication(1841);
-        System.out.println("Проверка Дубровских с разными годами выпуска " + dubrovsky.equals(dubrovsky2));
+        System.out.println("Проверка Дубровского и Дубровского2 с разными годами выпуска ->" + dubrovsky.equals(dubrovsky2));
         System.out.println();
 
-        System.out.println("Использование hashCode, где для книг не сравнивается год выпуска");
-        if (dubrovsky.hashCode() == dubrovsky2.hashCode()) {
-            System.out.println("Это одинаковые произведения");
-        }
-        else {
-            System.out.println("Это разные произведения");
-        }
+        System.out.println("Использование hashCode");
+        System.out.println("Проверка hash Дубровского и Сборника ->" + dubrovsky.hashCode() + " " + collectionVysotsky.hashCode());
+        System.out.println("Проверка hash Дубровского и Дубровского2 ->" + dubrovsky.hashCode() + " " + dubrovsky2.hashCode());
+
     }
 }
