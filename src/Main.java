@@ -17,6 +17,7 @@ public class Main {
         System.out.println("----Второй автор----");
         System.out.println(vysotsky.toString());
         System.out.println();
+
         System.out.println("Использование equals, где для книг не сравнивается год выпуска");
         System.out.println("Приверка Дубровского и сборника Высоцкого " + dubrovsky.equals(collectionVysotsky));
         Book dubrovsky2 = new Book("Дубровкий", pushkin, 1840);
@@ -24,6 +25,7 @@ public class Main {
         dubrovsky2.setYearPublication(1841);
         System.out.println("Проверка Дубровских с разными годами выпуска " + dubrovsky.equals(dubrovsky2));
         System.out.println();
+
         System.out.println("Использование hashCode, где для книг не сравнивается год выпуска");
         if (dubrovsky.hashCode() == dubrovsky2.hashCode()) {
             System.out.println("Это одинаковые произведения");
